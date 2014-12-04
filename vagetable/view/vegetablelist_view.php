@@ -26,16 +26,16 @@
 	<hr />
 
     <?php $before_vegetable = ""; ?>
-    <?php if (count($vegetables) > 0): ?>   
-    <?php foreach ($vegetables as $data): ?>
-    <?php if ($before_vegetable != $data['category_name']): ?>
-    <h2><?php echo $data['category_name']; ?></h2>
-	<?php endif; ?>
-		<li>
-			<?php echo $data['item_name']; ?>
-		</li>　
-		<?php $before_vegetable = $data['category_name']; ?>
-		<?php endforeach; ?>　
-	<?php endif; ?> 
+    	<?php if (count($vegetables) > 0): ?>   
+    		<?php foreach ($vegetables as $data): ?>
+    			<?php if ($before_vegetable != $data['category_name']): ?>
+    				<h2><?php echo $data['category_name']; ?></h2>
+				<?php endif; ?>
+				<li>
+					<?php echo $data['item_name']; ?>
+				</li>　
+				<?php $before_vegetable = $data['category_name']; ?>
+			<?php endforeach; ?>　
+		<?php endif; ?> 
 </body>
 </html>
